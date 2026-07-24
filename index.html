@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Травматология и ортопедия | Медклик Новосибирск</title>
+    <meta name="description" content="Элитная травматология и ортопедия в Новосибирске. Круглосуточный травмпункт, врачи высшей категории, современное оборудование.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS Variables - Premium Palette ===== */
+        :root {
+            --primary-navy: #0f172a;
+            --primary-deep: #1e293b;
+            --accent-gold: #c9a96e;
+            --accent-gold-light: #d4b87a;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --bg-white: #ffffff;
+            --bg-cream: #fafaf9;
+            --bg-light: #f7fafc;
+            --border-subtle: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            /* Typography */
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-heading: 'Montserrat', -apple-system, sans-serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            
+            /* Transitions */
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            background-color: var(--bg-white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== Typography System ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--primary-navy);
+            line-height: 1.2;
+        }
+
+        .display-text {
+            font-family: var(--font-display);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== Container ===== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+
+        /* ===== Header ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition-smooth);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            letter-spacing: 0.02em;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .header-phone {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            letter-spacing: 0.01em;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: var(--transition-smooth);
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: var(--primary-navy);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-deep);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-navy);
+            border: 2px solid var(--primary-navy);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-navy);
+            color: white;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            color: white;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.35);
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 24px;
+            background: white;
+            border: 1px solid var(--border-subtle);
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 68px;
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--primary-navy);
+            margin-bottom: 28px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 42px;
+            }
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--accent-gold);
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            font-size: 19px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 44px;
+            max-width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-subtitle {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-actions {
+                justify-content: center;
+            }
+        }
+
+        .hero-actions .btn {
+            padding: 18px 40px;
+            font-size: 14px;
+        }
+
+        .hero-contact-info {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-subtle);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease 0.8s forwards;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-contact-info {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 32px;
+            }
+        }
+
+        .hero-contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-contact-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .hero-contact-value {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .hero-visual {
+            position: relative;
+            opacity: 0;
+            transform: translateX(50px);
+            animation: fadeInRight 1s ease 0.5s forwards;
+        }
+
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
+            aspect-ratio: 4/5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-placeholder {
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 120px;
+            font-family: var(--font-display);
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            background: white;
+            padding: 28px 32px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-floating-card.card-1 {
+            bottom: -30px;
+            left: -40px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-floating-card.card-2 {
+            top: 40px;
+            right: -30px;
+            animation: float 6s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .floating-card-number {
+            font-family: var(--font-display);
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .floating-card-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== Section Base ===== */
+        section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 72px;
+        }
+
+        .section-overline {
+            display: inline-block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-overline::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 52px;
+            font-weight: 300;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 38px;
+            }
+        }
+
+        .section-description {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* ===== About Section ===== */
+        .about-section {
+            background: var(--bg-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-card {
+            background: var(--bg-white);
+            padding: 44px 36px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-elegant);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.1), rgba(201, 169, 110, 0.05));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 26px;
+            color: var(--accent-gold);
+        }
+
+        .about-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-navy);
+        }
+
+        .about-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .working-hours-banner {
+            margin-top: 64px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
+            padding: 48px 56px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .working-hours-banner {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+                padding: 36px 28px;
+            }
+        }
+
+        .working-hours-text h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .working-hours-text p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0;
+        }
+
+        .working-hours-time {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 300;
+            color: var(--accent-gold);
+        }
+
+        /* ===== Services Section ===== */
+        .services-section {
+            background: var(--bg-cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition-elegant);
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-cream);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--primary-navy);
+            flex-shrink: 0;
+        }
+
+        .service-card h3 {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--bg-cream);
+            font-size: 15px;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-name {
+            color: var(--text-secondary);
+        }
+
+        .service-price {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--primary-navy);
+            white-space: nowrap;
+            margin-left: 16px;
+        }
+
+        /* ===== Advantages Section ===== */
+        .advantages-section {
+            background: var(--bg-white);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        @media (max-width: 992px) {
+            .advantages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .advantage-item {
+            text-align: center;
+            padding: 40px 24px;
+        }
+
+        .advantage-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 28px;
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.08), rgba(201, 169, 110, 0.03));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--accent-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .advantage-item:hover .advantage-icon-wrapper {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.15), rgba(201, 169, 110, 0.08));
+        }
+
+        .advantage-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-navy);
+        }
+
+        .advantage-item p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* ===== DOCTORS SECTION - ENHANCED ===== */
+        .doctors-section {
+            background: var(--bg-cream);
+        }
+
+        .doctors-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+        }
+
+        .doctors-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .doctor-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-navy);
+        }
+
+        .doctor-feature-check {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 640px) {
+            .doctors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .doctor-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-elegant);
+            position: relative;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .doctor-photo-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, #e8eaf0 0%, #d1d5db 100%);
+            overflow: hidden;
+        }
+
+        .doctor-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-deep) 100%);
+            color: white;
+        }
+
+        .doctor-avatar-initials {
+            font-family: var(--font-display);
+            font-size: 72px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.25);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .doctor-avatar-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+        }
+
+        .doctor-badge-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--secondary-color, #10b981);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: currentColor;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .doctor-info {
+            padding: 36px;
+        }
+
+        .doctor-name {
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 500;
+            color: var(--primary-navy);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .doctor-specialty {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+        }
+
+        .doctor-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .doctor-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+            margin-bottom: 24px;
+        }
+
+        .doctor-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .doctor-meta-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .doctor-meta-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .doctor-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .rating-value {
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 15px;
+        }
+
+        .rating-count {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .doctor-price-tag {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: var(--bg-cream);
+            border-radius: var(--radius-md);
+            margin-bottom: 24px;
+        }
+
+        .price-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .price-amount {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .doctor-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .doctor-actions .btn {
+            flex: 1;
+            padding: 14px 20px;
+            font-size: 12px;
+        }
+
+        /* ===== Price Section ===== */
+        .price-section {
+            background: var(--bg-white);
+        }
+
+        .price-table-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .price-table-header {
+            background: var(--primary-navy);
+            color: white;
+            padding: 28px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-table-header h3 {
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 400;
+            color: white;
+            margin: 0;
+        }
+
+        .price-table-header-note {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead th {
+            background: var(--bg-cream);
+            padding: 18px 28px;
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        tbody tr {
+            transition: var(--transition-smooth);
+        }
+
+        tbody tr:hover {
+            background: var(--bg-cream);
+        }
+
+        tbody td {
+            padding: 20px 28px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 15px;
+        }
+
+        tbody td:first-child {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        tbody td:last-child {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--primary-navy);
+            white-space: nowrap;
+        }
+
+        .price-footer {
+            background: var(--bg-cream);
+            padding: 28px 40px;
+            text-align: center;
+        }
+
+        .payment-methods {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .price-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== Reviews Section ===== */
+        .reviews-section {
+            background: var(--bg-cream);
+        }
+
+        .reviews-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: var(--bg-white);
+            padding: 44px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 28px;
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .review-card:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .review-quote {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--accent-gold);
+            line-height: 1;
+            margin-bottom: 16px;
+            opacity: 0.4;
+        }
+
+        .review-text {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-primary);
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .review-author-name {
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 15px;
+        }
+
+        .review-author-detail {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .reviews-actions {
+            text-align: center;
+            margin-top: 56px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CTA Section ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-deep) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 992px) {
+            .cta-grid {
+                grid-template-columns: 1fr;
+                gap: 56px;
+            }
+        }
+
+        .cta-content h2 {
+            font-family: var(--font-display);
+            font-size: 46px;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .cta-content h2 {
+                font-size: 34px;
+            }
+        }
+
+        .cta-content > p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .cta-contacts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .cta-contact-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: white;
+        }
+
+        .cta-contact-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .cta-contact-text strong {
+            display: block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .cta-contact-text span {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .cta-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .cta-benefit {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .cta-benefit-check {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-navy);
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+
+        .cta-form-wrapper {
+            background: var(--bg-white);
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-form-wrapper h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--primary-navy);
+            margin-bottom: 8px;
+        }
+
+        .cta-form-wrapper > p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: var(--text-primary);
+            background: var(--bg-white);
+            transition: var(--transition-smooth);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: var(--text-muted);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .cta-form-submit {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .cta-form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== Contacts Section ===== */
+        .contacts-section {
+            background: var(--bg-white);
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+        }
+
+        @media (max-width: 992px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info-card {
+            background: var(--bg-cream);
+            padding: 48px;
+            border-radius: var(--radius-lg);
+        }
+
+        .contact-info-card h3 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--primary-navy);
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-detail {
+            margin-bottom: 24px;
+        }
+
+        .contact-detail strong {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .contact-detail-value {
+            font-size: 16px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .schedule-table {
+            margin-top: 24px;
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 14px;
+        }
+
+        .schedule-row:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-day {
+            color: var(--text-secondary);
+        }
+
+        .schedule-time {
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .schedule-row.highlight {
+            background: rgba(201, 169, 110, 0.08);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-navy);
+            color: white;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+
+        .social-link:hover {
+            background: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .map-container {
+            height: 480px;
+            background: var(--bg-cream);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .transport-info {
+            margin-top: 28px;
+            padding: 28px;
+            background: var(--bg-cream);
+            border-radius: var(--radius-md);
+        }
+
+        .transport-info h4 {
+            font-size: 16px;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+        }
+
+        .transport-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .transport-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== FAQ Section ===== */
+        .faq-section {
+            background: var(--bg-cream);
+        }
+
+        .faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            margin-bottom: 16px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            padding: 24px 32px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-question:hover {
+            background: var(--bg-cream);
+        }
+
+        .faq-question-text {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary-navy);
+        }
+
+        .faq-toggle {
+            width: 32px;
+            height: 32px;
+            background: var(--bg-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item.active .faq-toggle {
+            background: var(--accent-gold);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 32px 24px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .faq-actions {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--primary-navy);
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 56px;
+            margin-bottom: 64px;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 320px;
+        }
+
+        .footer-column h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-gold);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 6px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-legal a {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-legal a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Utility Classes ===== */
+        .text-center { text-align: center; }
+        .text-gold { color: var(--accent-gold); }
+        
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-gold-light);
+        }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "Медклик — Травматология и ортопедия",
+        "description": "Клиника травматологии и ортопедии в Новосибирске",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Новогодняя, 23/2",
+            "addressLocality": "Новосибирск",
+            "addressCountry": "RU"
+        },
+        "telephone": "+73832479017",
+        "openingHours": "Mo-Sa 07:30-21:30, Su 08:00-21:30"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="top-bar-logo">
+                    <img src="images/logo.svg" alt="МедКлик Травматология" width="140" height="36">
+                </a>
+                <div class="header-right">
+                    <a href="tel:+73832479017" class="header-phone">+7 (383) 247-90-17</a>
+                    <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        Круглосуточный травмпункт
+                    </div>
+                    
+                    <h1 class="hero-title display-text">
+                        Травматология<br><em>и ортопедия</em>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Профессиональная медицинская помощь при травмах и заболеваниях опорно-двигательного аппарата. Комплексная диагностика, лечение и реабилитация.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться на прием</span></button>
+                        <button class="btn btn-outline" onclick="scrollToSection('services')"><span>Услуги и цены</span></button>
+                    </div>
+                    
+                    <div class="hero-contact-info">
+                        <div class="hero-contact-item">
+                            <span class="hero-contact-label">Телефон</span>
+                            <span class="hero-contact-value">+7 (383) 247-90-17</span>
+                        </div>
+                        <div class="hero-contact-item">
+                            <span class="hero-contact-label">Режим работы</span>
+                            <span class="hero-contact-value">Ежедневно 7:30 — 21:30</span>
+                        </div>
+                        <div class="hero-contact-item">
+                            <span class="hero-contact-label">Адрес</span>
+                            <span class="hero-contact-value">Новогодняя ул., 23/2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img 
+                            src="images/front.jpg" 
+                            alt="Травмпункт МедКлик"
+                            loading="eager"
+                        >
+                        <div class="hero-image-bg"></div>
+                    </div>
+                        
+                        <div class="hero-floating-card card-2">
+                            <div class="floating-card-number">Рентген</div>
+                            <div class="floating-card-label">Травмпункт</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">О направлении</span>
+                <h2 class="section-title display-text">Комплексная помощь в травматологии и ортопедии</h2>
+                <p class="section-description">
+                    Направление травматологии и ортопедии клиники Медклик обеспечивает полный цикл медицинской помощи — от диагностики до полной реабилитации пациентов.
+                </p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">&#x2740;</div>
+                    <h3>Острые травмы</h3>
+                    <p>Экстренная помощь при переломах, вывихах, растяжениях и ушибах. Оперативная диагностика и квалифицированное лечение.</p>
+                </div>
+                
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">&#x2756;</div>
+                    <h3>Заболевания суставов</h3>
+                    <p>Диагностика и лечение артрита, артроза, бурсита. Современные методики восстановления функции суставов.</p>
+                </div>
+                
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">&#x2759;</div>
+                    <h3>Патологии позвоночника</h3>
+                    <p>Лечение грыж межпозвоночных дисков, остеохондроза, сколиоза. Индивидуальные программы восстановления.</p>
+                </div>
+                
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">&#x2757;</div>
+                    <h3>Спортивная медицина</h3>
+                    <p>Лечение спортивных травм и профессиональная реабилитация спортсменов любого уровня подготовки.</p>
+                </div>
+                
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">&#x2726;</div>
+                    <h3>Ортопедические изделия</h3>
+                    <p>Индивидуальный подбор ортопедических стелек, ортезов, бандажей и корригирующих устройств.</p>
+                </div>
+                
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">&#x2734;</div>
+                    <h3>Инъекционная терапия</h3>
+                    <p>PRP-терапия, внутрисуставные инъекции гиалуроновой кислоты, терапевтические блокады.</p>
+                </div>
+            </div>
+            
+            <div class="working-hours-banner animate-on-scroll">
+                <div class="working-hours-text">
+                    <h3>Режим работы клиники</h3>
+                    <p>Прием ведут врачи травматологи-ортопеды с опытом работы от 7 лет</p>
+                </div>
+                <div class="working-hours-time">Ежедневно<br>7:30 — 21:30</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Услуги</span>
+                <h2 class="section-title display-text">Спектр медицинских услуг</h2>
+                <p class="section-description">
+                    Полный комплекс услуг по диагностике, лечению и реабилитации заболеваний опорно-двигательного аппарата
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">&#x2796;</div>
+                        <h3>Консультации и диагностика</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Первичный прием травматолога-ортопеда</span>
+                            <span class="service-price">2 600 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Повторная консультация</span>
+                            <span class="service-price">по запросу</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Комплексное обследование ОДА</span>
+                            <span class="service-price">от 3 000 &#x20bd;</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">&#x2752;</div>
+                        <h3>Лечение травм</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Вправление вывихов</span>
+                            <span class="service-price">950 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Наложение гипсовой повязки</span>
+                            <span class="service-price">960 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Снятие гипсовой повязки</span>
+                            <span class="service-price">360 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Блокада места перелома</span>
+                            <span class="service-price">480 &#x20bd;</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">&#x275B;</div>
+                        <h3>Инъекционная терапия</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">PRP-терапия (плазмолифтинг)</span>
+                            <span class="service-price">5 000 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Внутрисуставная инъекция ГК</span>
+                            <span class="service-price">от 8 000 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Терапевтическая блокада</span>
+                            <span class="service-price">от 2 000 &#x20bd;</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">&#x2772;</div>
+                        <h3>Диагностические процедуры</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Рентгенография (все отделы)</span>
+                            <span class="service-price">от 1 320 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">УЗИ суставов</span>
+                            <span class="service-price">от 2 500 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Дуплексное сканирование сосудов</span>
+                            <span class="service-price">от 2 600 &#x20bd;</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card animate-on-scroll">
+                    <div class="service-header">
+                        <div class="service-icon">&#x2766;</div>
+                        <h3>Реабилитация</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>
+                            <span class="service-name">Восстановление после переломов</span>
+                            <span class="service-price">индивидуально</span>
+                        </li>
+                        <li>
+                            <span class="service-name">ЛФК с инструктором</span>
+                            <span class="service-price">от 1 800 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Физиотерапия (сеанс)</span>
+                            <span class="service-price">от 1 200 &#x20bd;</span>
+                        </li>
+                        <li>
+                            <span class="service-name">Программа реабилитации спортсмена</span>
+                            <span class="service-price">от 15 000 &#x20bd;</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section" id="advantages">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Преимущества</span>
+                <h2 class="section-title display-text">Почему выбирают нас</h2>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-item animate-on-scroll">
+                    <div class="advantage-icon-wrapper">&#x23F3;</div>
+                    <h3>Оперативная помощь</h3>
+                    <p>Прием день в день без очередей. Круглосуточный травмпункт для экстренных случаев любой сложности.</p>
+                </div>
+                
+                <div class="advantage-item animate-on-scroll">
+                    <div class="advantage-icon-wrapper">&#x2695;</div>
+                    <h3>Высокая квалификация</h3>
+                    <p>Врачи травматологи-ортопеды со стажем клинической практики от 7 лет. Регулярное повышение квалификации.</p>
+                </div>
+                
+                <div class="advantage-item animate-on-scroll">
+                    <div class="advantage-icon-wrapper">&#x2699;</div>
+                    <h3>Современное оборудование</h3>
+                    <p>Цифровая рентгенография, УЗИ высокого разрешения, передовая диагностическая аппаратура.</p>
+                </div>
+                
+                <div class="advantage-item animate-on-scroll">
+                    <div class="advantage-icon-wrapper">&#x274E;</div>
+                    <h3>Прозрачное ценообразование</h3>
+                    <p>Фиксированные цены без скрытых платежей. Возможность оплаты банковской картой и по ДМС.</p>
+                </div>
+                
+                <div class="advantage-item animate-on-scroll">
+                    <div class="advantage-icon-wrapper">&#x275A;</div>
+                    <h3>Удобная локация</h3>
+                    <p>Центр Новосибирска, развитая транспортная инфраструктура, бесплатная парковка для пациентов.</p>
+                </div>
+                
+                <div class="advantage-item animate-on-scroll">
+                    <div class="advantage-icon-wrapper">&#x274C;</div>
+                    <h3>Комплексный подход</h3>
+                    <p>Диагностика, лечение и реабилитация в рамках одной клиники под наблюдением лечащего врача.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS SECTION - WITH REAL DATA -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Специалисты</span>
+                <h2 class="section-title display-text">Наши врачи</h2>
+                <p class="section-description">
+                    Опытные специалисты с подтвержденной квалификацией и многолетней практикой
+                </p>
+            </div>
+            
+            <div class="doctors-intro animate-on-scroll">
+                <p style="font-size: 17px; color: var(--text-secondary);">
+                    В нашем центре принимают квалифицированные врачи травматологи-ортопеды
+                </p>
+                
+                <div class="doctors-features">
+                    <div class="doctor-feature">
+                        <span class="doctor-feature-check">&#x2713;</span>
+                        Высшее медицинское образование
+                    </div>
+                    <div class="doctor-feature">
+                        <span class="doctor-feature-check">&#x2713;</span>
+                        Стаж работы от 7 лет
+                    </div>
+                    <div class="doctor-feature">
+                        <span class="doctor-feature-check">&#x2713;</span>
+                        Регулярное повышение квалификации
+                    </div>
+                    <div class="doctor-feature">
+                        <span class="doctor-feature-check">&#x2713;</span>
+                        Индивидуальный подход к каждому пациенту
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctors-grid">
+                
+                <!-- Doctor 1: Салимов Салим Шарифович -->
+                <div class="doctor-card animate-on-scroll">
+                    <div class="doctor-photo-wrapper">
+                        <div class="doctor-photo-placeholder">
+                            <img src="images/врач3.jpg">
+                        </div>
+                        <div class="doctor-badge-status" style="--secondary-color: #10b981;">
+                            <span class="status-dot"></span>
+                            Принимает
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Салимов Салим Шарифович</h3>
+                        <div class="doctor-specialty">Травматолог-ортопед</div>
+                        
+                        <p class="doctor-description">
+                            Врач травматолог-ортопед с высшим медицинским образованием. 
+                            Специализируется на диагностике и лечении заболеваний опорно-двигательного аппарата, 
+                            острых травм и их последствий. Проводит комплексное обследование и назначает 
+                            индивидуальные программы лечения.
+                        </p>
+                        
+                        <div class="doctor-meta">
+                            <div class="doctor-meta-item">
+                                <span class="doctor-meta-label">Стаж работы</span>
+                                <span class="doctor-meta-value">8 лет</span>
+                            </div>
+                            <div class="doctor-meta-item">
+                                <span class="doctor-meta-label">Отзывов</span>
+                                <span class="doctor-meta-value">19 отзывов</span>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-rating">
+                            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-value">4.9</span>
+                            <span class="rating-count">(ПроДокторов)</span>
+                        </div>
+                        
+                        <div class="doctor-price-tag">
+                            <span class="price-label">Первичный прием</span>
+                            <span class="price-amount">2 600 &#x20bd;</span>
+                        </div>
+                        
+                        <div class="doctor-actions">
+                            <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
+                            <button class="btn btn-outline"><span>Подробнее</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor 2: Гущин Виктор -->
+                <div class="doctor-card animate-on-scroll">
+                    <div class="doctor-photo-wrapper">
+                        <div class="doctor-photo-placeholder">
+                            <img src="images/врач1.jpg">
+                        </div>
+                        <div class="doctor-badge-status" style="--secondary-color: #10b981;">
+                            <span class="status-dot"></span>
+                            Принимает
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Гущин Владимир Викторович</h3>
+                        <div class="doctor-specialty">Травматолог </div>
+                        
+                        <p class="doctor-description">
+                            Врач травматолог-ортопед. 
+                            Специализируется на диагностике и лечении заболеваний опорно-двигательного аппарата, 
+                            включая плечелопаточный периартроз, остеоартроз, пяточную шпору, сколиоз, 
+                            плоскостопие. Занимается хирургическим лечением травм и их последствий.
+                        </p>
+                        
+                        <div class="doctor-meta">
+                            <div class="doctor-meta-item">
+                                <span class="doctor-meta-label">Стаж работы</span>
+                                <span class="doctor-meta-value">7 лет</span>
+                            </div>
+                            <div class="doctor-meta-item">
+                                <span class="doctor-meta-label">Отзывов</span>
+                                <span class="doctor-meta-value">30 отзывов</span>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-rating">
+                            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-value">4.8</span>
+                            <span class="rating-count">(ПроДокторов)</span>
+                        </div>
+                        
+                        <div class="doctor-price-tag">
+                            <span class="price-label">Первичный прием</span>
+                            <span class="price-amount">2 600 &#x20bd;</span>
+                        </div>
+                        
+                        <div class="doctor-actions">
+                            <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
+                            <button class="btn btn-outline"><span>Подробнее</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor 3: Почаев Оятуллох Хабибович -->
+                <div class="doctor-card animate-on-scroll">
+                    <div class="doctor-photo-wrapper">
+                        <div class="doctor-photo-placeholder">
+                            <img src="images/врач2.jpg">
+                        </div>
+                        <div class="doctor-badge-status" style="--secondary-color: #10b981;">
+                            <span class="status-dot"></span>
+                            Принимает
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Почаев Оятуллох Хабибович</h3>
+                        <div class="doctor-specialty">Травматолог-ортопед</div>
+                        
+                        <p class="doctor-description">
+                            Врач травматолог-ортопед с широким профилем практики. 
+                            Осуществляет диагностику и лечение травм опорно-двигательного аппарата, 
+                            заболеваний суставов и позвоночника. Проводит консервативное и хирургическое 
+                            лечение, а также реабилитацию после травм.
+                        </p>
+                        
+                        <div class="doctor-meta">
+                            <div class="doctor-meta-item">
+                                <span class="doctor-meta-label">Стаж работы</span>
+                                <span class="doctor-meta-value">7+ лет</span>
+                            </div>
+                            <div class="doctor-meta-item">
+                                <span class="doctor-meta-label">Стоимость приема</span>
+                                <span class="doctor-meta-value">от 2 300 &#x20bd;</span>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-rating">
+                            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="rating-value">4.9</span>
+                            <span class="rating-count">(Медклик)</span>
+                        </div>
+                        
+                        <div class="doctor-price-tag">
+                            <span class="price-label">Первичный прием</span>
+                            <span class="price-amount">2 600 &#x20bd;</span>
+                        </div>
+                        
+                        <div class="doctor-actions">
+                            <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
+                            <button class="btn btn-outline"><span>Подробнее</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="price-section" id="price">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Стоимость</span>
+                <h2 class="section-title display-text">Цены на услуги</h2>
+            </div>
+            
+            <div class="price-table-container animate-on-scroll">
+                <div class="price-table-header">
+                    <h3>Основной прайс-лист</h3>
+                    <span class="price-table-header-note">* актуально на текущий период</span>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Прием травматолога-ортопеда (первичный)</td>
+                            <td>2 600 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>Прием травматолога-ортопеда (повторный)</td>
+                            <td>2 300 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>Вправление вывиха</td>
+                            <td>950 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>Гипсовая повязка (наложение)</td>
+                            <td>960 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>Гипсовая повязка (снятие)</td>
+                            <td>360 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>Блокада места перелома</td>
+                            <td>480 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>PRP-терапия</td>
+                            <td>5 000 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>Рентгенография (от)</td>
+                            <td>1 320 &#x20bd;</td>
+                        </tr>
+                        <tr>
+                            <td>УЗИ суставов (от)</td>
+                            <td>2 500 &#x20bd;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="price-footer">
+                    <p class="payment-methods">
+                        <strong>Принимаем к оплате:</strong> наличные средства, банковские карты, полисы ДМС
+                    </p>
+                    <div class="price-buttons">
+                        <button class="btn btn-primary"><span>Скачать полный прайс-лист</span></button>
+                        <button class="btn btn-outline" onclick="scrollToSection('cta')"><span>Рассчитать стоимость</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Отзывы</span>
+                <h2 class="section-title display-text">Мнение пациентов</h2>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="review-card animate-on-scroll">
+                    <div class="review-quote">&ldquo;</div>
+                    <p class="review-text">
+                        Обратилась после спортивной травмы колена. Врач быстро поставил диагноз, назначил комплексное лечение. 
+                        Уже через неделю почувствовала значительное облегчение. Выражаю искреннюю благодарность за высокий профессионализм и внимательное отношение.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">AM</div>
+                        <div>
+                            <div class="review-author-name">Анна Михайлова</div>
+                            <div class="review-author-detail">Пациент, 34 года</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card animate-on-scroll">
+                    <div class="review-quote">&ldquo;</div>
+                    <p class="review-text">
+                        Прохожу курс лечения артроза коленного сустава уже полгода. PRP-терапия дает отличные результаты — боль практически ушла, подвижность восстановлена. 
+                        Рекомендую эту клинику всем, кто ценит свое здоровье.
+                    </p>
+                    <div class="review-author">
+                        <div class="review-avatar">ES</div>
+                        <div>
+                            <div class="review-author-name">Елена Сергеева</div>
+                            <div class="review-author-detail">Пациент, 58 лет</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reviews-actions animate-on-scroll">
+                <button class="btn btn-outline"><span>Оставить отзыв</span></button>
+                <button class="btn btn-primary"><span>Все отзывы на Про Докторов</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-grid">
+                <div class="cta-content animate-on-scroll">
+                    <h2 class="display-text">Запишитесь на прием к травматологу-ортопеду</h2>
+                    <p>Свяжитесь с нами удобным способом или оставьте заявку онлайн — мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
+                    
+                    <div class="cta-contacts-list">
+                        <div class="cta-contact-row">
+                            <div class="cta-contact-icon">&#x260E;</div>
+                            <div class="cta-contact-text">
+                                <strong>Телефон</strong>
+                                <span>+7 (383) 247-90-17</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-contact-row">
+                            <div class="cta-contact-icon">&#x1F557;</div>
+                            <div class="cta-contact-text">
+                                <strong>Режим работы</strong>
+                                <span>Ежедневно 7:30 — 21:30 (воскресенье с 8:00)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-contact-row">
+                            <div class="cta-contact-icon">&#x1F4CD;</div>
+                            <div class="cta-contact-text">
+                                <strong>Адрес</strong>
+                                <span>г. Новосибирск, ул. Новогодняя, 23/2</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-benefits">
+                        <div class="cta-benefit">
+                            <span class="cta-benefit-check">&#x2713;</span>
+                            Бесплатная консультация координатора
+                        </div>
+                        <div class="cta-benefit">
+                            <span class="cta-benefit-check">&#x2713;</span>
+                            Подбор удобного времени приема
+                        </div>
+                        <div class="cta-benefit">
+                            <span class="cta-benefit-check">&#x2713;</span>
+                            Напоминание о предстоящем визите
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-form-wrapper animate-on-scroll">
+                    <h3>Онлайн-заявка</h3>
+                    <p>Заполните форму и мы свяжемся с вами</p>
+                    
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Как к вам обращаться?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+7 (___) ___-__-__">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="time">Предпочтительное время</label>
+                            <select id="time" name="time" class="form-control">
+                                <option value="">Выберите время</option>
+                                <option value="morning">Утренние часы (до 12:00)</option>
+                                <option value="day">Дневное время (12:00 — 17:00)</option>
+                                <option value="evening">Вечерние часы (после 17:00)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment">Комментарий</label>
+                            <textarea id="comment" name="comment" class="form-control" placeholder="Опишите вашу проблему (необязательно)"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-form-submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts-section" id="contacts">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Контакты</span>
+                <h2 class="section-title display-text">Как нас найти</h2>
+            </div>
+            
+            <div class="contacts-grid">
+                <div class="contact-info-card animate-on-scroll">
+                    <h3>&#x1F3E5; Клиника Медклик</h3>
+                    
+                    <div class="contact-detail">
+                        <strong>Юридический адрес</strong>
+                        <div class="contact-detail-value">г. Новосибирск, ул. Новогодняя, 23/2</div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <strong>Телефон</strong>
+                        <div class="contact-detail-value"><a href="tel:+73832479017">+7 (383) 247-90-17</a></div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                       <strong>Email</strong>
+                        <div class="contact-detail-value"><a href="mailto:info@medclick.info">info@medclick.info</a></div>
+                    </div>
+                    
+                    <div class="schedule-table">
+                        <div class="schedule-row">
+                            <span class="schedule-day">Понедельник — Суббота</span>
+                            <span class="schedule-time">7:30 — 21:30</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="schedule-day">Воскресенье</span>
+                            <span class="schedule-time">8:00 — 21:30</span>
+                        </div>
+                        <div class="schedule-row highlight">
+                            <span class="schedule-day">Травмпункт</span>
+                            <span class="schedule-time">Круглосуточно</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="VK">VK</a>
+                        <a href="#" class="social-link" title="Telegram">TG</a>
+                        <a href="#" class="social-link" title="WhatsApp">WA</a>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="map-container">
+                        Интерактивная карта проезда
+                    </div>
+                    
+                    <div class="transport-info">
+                        <h4>Как добраться</h4>
+                        <div class="transport-item">
+                            <span>&#x1F687;</span>
+                            <span>Метро: станция «...» (минут пешком)</span>
+                        </div>
+                        <div class="transport-item">
+                            <span>&#x1F68C;</span>
+                            <span>Автобусы: маршруты № ...</span>
+                        </div>
+                        <div class="transport-item">
+                            <span>&#x1F17F;</span>
+                            <span>Парковка: бесплатная для пациентов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">FAQ</span>
+                <h2 class="section-title display-text">Часто задаваемые вопросы</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Необходимо ли предварительная запись на прием?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Мы рекомендуем записываться заранее для минимизации времени ожидания. Однако принимаем пациентов и без предварительной записи при наличии свободных окон. Для экстренных случаев функционирует круглосуточный травмпункт.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Осуществляете ли вы прием по полисам ДМС?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Да, наша клиника сотрудничает со страховыми медицинскими организациями. Для уточнения наличия договора с вашей страховой компанией обратитесь к администратору по телефону +7 (383) 247-90-17.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Можно ли обратиться сразу после получения травмы?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Безусловно. В нашей клинике работает круглосуточный травмпunkt, обеспечивающий экстренную медицинскую помощь при острых травмах любой степени тяжести в любое время суток.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Какие документы необходимо иметь при себе?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Рекомендуем предоставить: паспорт гражданина РФ, полис ОМС или ДМС (при наличии), результаты предыдущих обследований и выписки из медицинских учреждений (для повторных консультаций).
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Предусмотрена ли возможность рассрочки оплаты?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Да, мы предоставляем возможность рассрочки оплаты лечения. Детальные условия программы рассрочки можно уточнить у администратора клиники при личном обращении или по телефону.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-question-text">Каково примерное время ожидания приема?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Мы оптимизировали процессы для минимизации ожидания пациентов. Среднее время ожидания составляет 10-15 минут. При онлайн-записи можно выбрать точное время визита.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-actions animate-on-scroll">
+                <button class="btn btn-gold"><span>Задать вопрос специалисту</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">МЕДКЛИК<span>.</span></a>
+                    <p>
+                        Многопрофильная медицинская клиника в Новосибирске. 
+                        Травматология и ортопедия — одно из ключевых направлений 
+                        нашей деятельности.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Консультации</a></li>
+                        <li><a href="#services">Лечение травм</a></li>
+                        <li><a href="#services">Инъекции</a></li>
+                        <li><a href="#services">Диагностика</a></li>
+                        <li><a href="#services">Реабилитация</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Информация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#doctors">Врачи</a></li>
+                        <li><a href="#price">Цены</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <div class="footer-contact-item">
+                        <span>&#x260E;</span>
+                        <span>+7 (383) 247-90-17</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>&#x1F4CD;</span>
+                        <span>ул. Новогодняя, 23/2</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>&#x1F557;</span>
+                        <span>Ежедневно 7:30-21:30</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>&#x2709;</span>
+                        <span>info@medclick.info</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2026 Медклик Новосибирск. Все права защищены.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Лицензия</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offset = 80; // header height
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: elementPosition - offset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked one if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            alert('Благодарим за заявку!\n\nМы свяжемся с вами в ближайшее время.\n\nИмя: ' + data.name + '\nТелефон: ' + data.phone);
+            event.target.reset();
+        }
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? x[1] : '+7 (' + x[2] + ')' + (x[3] ? ' ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize first FAQ as closed
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
