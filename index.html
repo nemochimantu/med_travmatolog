@@ -3,1863 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Травматология и ортопедия | Медклик Новосибирск</title>
-    <meta name="description" content="Элитная травматология и ортопедия в Новосибирске. Частный травмпункт, врачи высшей категории, современное оборудование.">
-    
+    <title>Травматология и ортопедия в Новосибирске | Медклик — жизнь без боли</title>
+    <meta name="description" content="Верните себе активную жизнь без боли уже сегодня. Частный травмпункт в Новосибирске: срочная помощь в день обращения, врачи с опытом от 7 лет, без операций и долгого восстановления. Лечение причин боли, а не симптомов.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        /* ===== CSS Variables - Premium Palette ===== */
-        :root {
-            --primary-navy: #0f172a;
-            --primary-deep: #1e293b;
-            --accent-gold: #c9a96e;
-            --accent-gold-light: #d4b87a;
-            --text-primary: #1a202c;
-            --text-secondary: #4a5568;
-            --text-muted: #718096;
-            --bg-white: #ffffff;
-            --bg-cream: #fafaf9;
-            --bg-light: #f7fafc;
-            --border-subtle: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12);
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 16px;
-            
-            /* Typography */
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-heading: 'Montserrat', -apple-system, sans-serif;
-            --font-body: 'Inter', -apple-system, sans-serif;
-            
-            /* Transitions */
-            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
 
-        /* ===== Reset & Base ===== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        body {
-            font-family: var(--font-body);
-            font-weight: 400;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            background-color: var(--bg-white);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* ===== Typography System ===== */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-            font-weight: 600;
-            color: var(--primary-navy);
-            line-height: 1.2;
-        }
-
-        .display-text {
-            font-family: var(--font-display);
-            font-weight: 300;
-            letter-spacing: -0.02em;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition-smooth);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        .map-container {
-            background: var(--bg-cream);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-smooth);
-        }
-        
-        .map-container:hover {
-            box-shadow: var(--shadow-lg); /* Усиление тени */
-            transform: translateY(-4px); /* Легкий подъем */
-        }
-        
-        .map-container img {
-            width: 100%;
-            height: auto;
-            min-height: 480px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        
-        .map-container:hover img {
-            transform: scale(1.02); /* Увеличение на 2% */
-        }
-
-        /* ===== Container ===== */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 24px;
-            }
-        }
-
-        /* ===== Header ===== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-subtle);
-            transition: var(--transition-smooth);
-        }
-
-        .header.scrolled {
-            box-shadow: var(--shadow-md);
-        }
-
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-family: var(--font-display);
-            font-size: 32px;
-            font-weight: 600;
-            color: var(--primary-navy);
-            letter-spacing: 0.02em;
-        }
-
-        .logo span {
-            color: var(--accent-gold);
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-        }
-
-        .header-phone {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--primary-navy);
-            letter-spacing: 0.01em;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 32px;
-            font-family: var(--font-heading);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            transition: var(--transition-smooth);
-        }
-
-        .btn:hover::before {
-            left: 0;
-        }
-
-        .btn span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn-primary {
-            background: var(--primary-navy);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-deep);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-navy);
-            border: 2px solid var(--primary-navy);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-navy);
-            color: white;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
-            color: white;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.35);
-        }
-
-        /* ===== Hero Section ===== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
-            padding-top: 100px;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 80%;
-            height: 150%;
-            background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-                text-align: center;
-            }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 24px;
-            background: white;
-            border: 1px solid var(--border-subtle);
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-gold);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: 68px;
-            font-weight: 300;
-            line-height: 1.1;
-            color: var(--primary-navy);
-            margin-bottom: 28px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease 0.2s forwards;
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 42px;
-            }
-        }
-
-        .hero-title em {
-            font-style: italic;
-            color: var(--accent-gold);
-            font-weight: 400;
-        }
-
-        .hero-subtitle {
-            font-size: 19px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 44px;
-            max-width: 520px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease 0.4s forwards;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-subtitle {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease 0.6s forwards;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-actions {
-                justify-content: center;
-            }
-        }
-
-        .hero-actions .btn {
-            padding: 18px 40px;
-            font-size: 14px;
-        }
-
-        .hero-contact-info {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            margin-top: 56px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border-subtle);
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease 0.8s forwards;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-contact-info {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 32px;
-            }
-        }
-
-        .hero-contact-item {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .hero-contact-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
-        .hero-contact-value {
-            font-family: var(--font-heading);
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--primary-navy);
-        }
-
-        .hero-visual {
-            position: relative;
-            opacity: 0;
-            transform: translateX(50px);
-            animation: fadeInRight 1s ease 0.5s forwards;
-        }
-
-        @keyframes fadeInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
-            aspect-ratio: 4/5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-image-placeholder {
-            color: rgba(255, 255, 255, 0.15);
-            font-size: 120px;
-            font-family: var(--font-display);
-        }
-
-        .hero-floating-card {
-            position: absolute;
-            background: white;
-            padding: 28px 32px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-lg);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-floating-card.card-1 {
-            bottom: -30px;
-            left: -40px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero-floating-card.card-2 {
-            top: 40px;
-            right: -30px;
-            animation: float 6s ease-in-out infinite 2s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-
-        .floating-card-number {
-            font-family: var(--font-display);
-            font-size: 42px;
-            font-weight: 600;
-            color: var(--accent-gold);
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .floating-card-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* ===== Section Base ===== */
-        section {
-            padding: 120px 0;
-            position: relative;
-        }
-
-        @media (max-width: 768px) {
-            section {
-                padding: 80px 0;
-            }
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto 72px;
-        }
-
-        .section-overline {
-            display: inline-block;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-bottom: 16px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .section-overline::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: var(--accent-gold);
-        }
-
-        .section-title {
-            font-family: var(--font-display);
-            font-size: 52px;
-            font-weight: 300;
-            color: var(--primary-navy);
-            margin-bottom: 20px;
-            line-height: 1.15;
-        }
-
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 38px;
-            }
-        }
-
-        .section-description {
-            font-size: 17px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-
-        /* ===== About Section ===== */
-        .about-section {
-            background: var(--bg-white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .about-card {
-            background: var(--bg-white);
-            padding: 44px 36px;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            transition: var(--transition-elegant);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: var(--transition-smooth);
-        }
-
-        .about-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: transparent;
-        }
-
-        .about-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .about-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, rgba(201, 169, 110, 0.1), rgba(201, 169, 110, 0.05));
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            font-size: 26px;
-            color: var(--accent-gold);
-        }
-
-        .about-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--primary-navy);
-        }
-
-        .about-card p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        .working-hours-banner {
-            margin-top: 64px;
-            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
-            padding: 48px 56px;
-            border-radius: var(--radius-lg);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .working-hours-banner {
-                flex-direction: column;
-                gap: 24px;
-                text-align: center;
-                padding: 36px 28px;
-            }
-        }
-
-        .working-hours-text h3 {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 400;
-            color: white;
-            margin-bottom: 8px;
-        }
-
-        .working-hours-text p {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.75);
-            margin: 0;
-        }
-
-        .working-hours-time {
-            font-family: var(--font-display);
-            font-size: 32px;
-            font-weight: 300;
-            color: var(--accent-gold);
-        }
-
-        /* ===== Services Section ===== */
-        .services-section {
-            background: var(--bg-cream);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 28px;
-        }
-
-        .service-card {
-            background: var(--bg-white);
-            padding: 40px;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-subtle);
-            transition: var(--transition-elegant);
-            position: relative;
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 28px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--bg-cream);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            color: var(--primary-navy);
-            flex-shrink: 0;
-        }
-
-        .service-card h3 {
-            font-size: 19px;
-            font-weight: 600;
-            color: var(--primary-navy);
-        }
-
-        .service-list {
-            list-style: none;
-        }
-
-        .service-list li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 0;
-            border-bottom: 1px solid var(--bg-cream);
-            font-size: 15px;
-        }
-
-        .service-list li:last-child {
-            border-bottom: none;
-        }
-
-        .service-name {
-            color: var(--text-secondary);
-        }
-
-        .service-price {
-            font-family: var(--font-heading);
-            font-weight: 600;
-            color: var(--primary-navy);
-            white-space: nowrap;
-            margin-left: 16px;
-        }
-
-        /* ===== Advantages Section ===== */
-        .advantages-section {
-            background: var(--bg-white);
-        }
-
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-        }
-
-        @media (max-width: 992px) {
-            .advantages-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .advantages-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .advantage-item {
-            text-align: center;
-            padding: 40px 24px;
-        }
-
-        .advantage-icon-wrapper {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 28px;
-            background: linear-gradient(135deg, rgba(201, 169, 110, 0.08), rgba(201, 169, 110, 0.03));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: var(--accent-gold);
-            transition: var(--transition-smooth);
-        }
-
-        .advantage-item:hover .advantage-icon-wrapper {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, rgba(201, 169, 110, 0.15), rgba(201, 169, 110, 0.08));
-        }
-
-        .advantage-item h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--primary-navy);
-        }
-
-        .advantage-item p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-        }
-
-        /* ===== DOCTORS SECTION - ENHANCED ===== */
-        .doctors-section {
-            background: var(--bg-cream);
-        }
-
-        .doctors-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 64px;
-        }
-
-        .doctors-features {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 32px;
-        }
-
-        .doctor-feature {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--primary-navy);
-        }
-
-        .doctor-feature-check {
-            width: 20px;
-            height: 20px;
-            background: var(--accent-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 12px;
-        }
-
-        .doctors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 40px;
-        }
-
-        @media (max-width: 640px) {
-            .doctors-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .doctor-card {
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-elegant);
-            position: relative;
-        }
-
-        .doctor-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .doctor-photo-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 4/5;
-            background: linear-gradient(135deg, #e8eaf0 0%, #d1d5db 100%);
-            overflow: hidden;
-        }
-
-        .doctor-photo-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-deep) 100%);
-            color: white;
-        }
-
-        .doctor-avatar-initials {
-            font-family: var(--font-display);
-            font-size: 72px;
-            font-weight: 300;
-            color: rgba(255, 255, 255, 0.25);
-            line-height: 1;
-            margin-bottom: 12px;
-        }
-
-        .doctor-avatar-label {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 500;
-        }
-
-        .doctor-badge-status {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--secondary-color, #10b981);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .status-dot {
-            width: 6px;
-            height: 6px;
-            background: currentColor;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        .doctor-info {
-            padding: 36px;
-        }
-
-        .doctor-name {
-            font-family: var(--font-display);
-            font-size: 26px;
-            font-weight: 500;
-            color: var(--primary-navy);
-            margin-bottom: 8px;
-            line-height: 1.2;
-        }
-
-        .doctor-specialty {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin-bottom: 20px;
-        }
-
-        .doctor-description {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-
-        .doctor-meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border-subtle);
-            margin-bottom: 24px;
-        }
-
-        .doctor-meta-item {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .doctor-meta-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
-        .doctor-meta-value {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--primary-navy);
-        }
-
-        .doctor-rating {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-
-        .stars {
-            color: var(--accent-gold);
-            font-size: 18px;
-            letter-spacing: 2px;
-        }
-
-        .rating-value {
-            font-weight: 600;
-            color: var(--primary-navy);
-            font-size: 15px;
-        }
-
-        .rating-count {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .doctor-price-tag {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 20px;
-            background: var(--bg-cream);
-            border-radius: var(--radius-md);
-            margin-bottom: 24px;
-        }
-
-        .price-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .price-amount {
-            font-family: var(--font-display);
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary-navy);
-        }
-
-        .doctor-actions {
-            display: flex;
-            gap: 12px;
-        }
-
-        .doctor-actions .btn {
-            flex: 1;
-            padding: 14px 20px;
-            font-size: 12px;
-        }
-
-        /* ===== Price Section ===== */
-        .price-section {
-            background: var(--bg-white);
-        }
-
-        .price-table-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border-subtle);
-        }
-
-        .price-table-header {
-            background: var(--primary-navy);
-            color: white;
-            padding: 28px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .price-table-header h3 {
-            font-family: var(--font-display);
-            font-size: 26px;
-            font-weight: 400;
-            color: white;
-            margin: 0;
-        }
-
-        .price-table-header-note {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        thead th {
-            background: var(--bg-cream);
-            padding: 18px 28px;
-            text-align: left;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            font-weight: 600;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        tbody tr {
-            transition: var(--transition-smooth);
-        }
-
-        tbody tr:hover {
-            background: var(--bg-cream);
-        }
-
-        tbody td {
-            padding: 20px 28px;
-            border-bottom: 1px solid var(--border-subtle);
-            font-size: 15px;
-        }
-
-        tbody td:first-child {
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        tbody td:last-child {
-            font-family: var(--font-heading);
-            font-weight: 600;
-            color: var(--primary-navy);
-            white-space: nowrap;
-        }
-
-        .price-footer {
-            background: var(--bg-cream);
-            padding: 28px 40px;
-            text-align: center;
-        }
-
-        .payment-methods {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .price-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* ===== Reviews Section ===== */
-        .reviews-section {
-            background: var(--bg-cream);
-        }
-
-        .reviews-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .review-card {
-            background: var(--bg-white);
-            padding: 44px;
-            border-radius: var(--radius-lg);
-            margin-bottom: 28px;
-            border-left: 4px solid var(--accent-gold);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-smooth);
-            position: relative;
-        }
-
-        .review-card:hover {
-            transform: translateX(8px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .review-quote {
-            font-family: var(--font-display);
-            font-size: 48px;
-            color: var(--accent-gold);
-            line-height: 1;
-            margin-bottom: 16px;
-            opacity: 0.4;
-        }
-
-        .review-text {
-            font-size: 17px;
-            line-height: 1.8;
-            color: var(--text-primary);
-            font-style: italic;
-            margin-bottom: 24px;
-        }
-
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .review-avatar {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        .review-author-name {
-            font-weight: 600;
-            color: var(--primary-navy);
-            font-size: 15px;
-        }
-
-        .review-author-detail {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .reviews-actions {
-            text-align: center;
-            margin-top: 56px;
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* ===== CTA Section ===== */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-deep) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 70%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(201, 169, 110, 0.1) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .cta-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        @media (max-width: 992px) {
-            .cta-grid {
-                grid-template-columns: 1fr;
-                gap: 56px;
-            }
-        }
-
-        .cta-content h2 {
-            font-family: var(--font-display);
-            font-size: 46px;
-            font-weight: 300;
-            color: white;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        @media (max-width: 768px) {
-            .cta-content h2 {
-                font-size: 34px;
-            }
-        }
-
-        .cta-content > p {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-
-        .cta-contacts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-
-        .cta-contact-row {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            color: white;
-        }
-
-        .cta-contact-icon {
-            width: 52px;
-            height: 52px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            flex-shrink: 0;
-        }
-
-        .cta-contact-text strong {
-            display: block;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent-gold);
-            margin-bottom: 4px;
-            font-weight: 600;
-        }
-
-        .cta-contact-text span {
-            font-size: 17px;
-            font-weight: 500;
-        }
-
-        .cta-benefits {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .cta-benefit {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .cta-benefit-check {
-            width: 20px;
-            height: 20px;
-            background: var(--accent-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-navy);
-            font-size: 11px;
-            flex-shrink: 0;
-        }
-
-        .cta-form-wrapper {
-            background: var(--bg-white);
-            padding: 48px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .cta-form-wrapper h3 {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 400;
-            color: var(--primary-navy);
-            margin-bottom: 8px;
-        }
-
-        .cta-form-wrapper > p {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 16px 20px;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            font-family: var(--font-body);
-            font-size: 15px;
-            color: var(--text-primary);
-            background: var(--bg-white);
-            transition: var(--transition-smooth);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
-        }
-
-        .form-control::placeholder {
-            color: var(--text-muted);
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .cta-form-submit {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
-            color: white;
-            border: none;
-            border-radius: var(--radius-md);
-            font-family: var(--font-heading);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-
-        .cta-form-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* ===== Contacts Section ===== */
-        .contacts-section {
-            background: var(--bg-white);
-        }
-
-        .contacts-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 56px;
-        }
-
-        @media (max-width: 992px) {
-            .contacts-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .contact-info-card {
-            background: var(--bg-cream);
-            padding: 48px;
-            border-radius: var(--radius-lg);
-        }
-
-        .contact-info-card h3 {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 400;
-            color: var(--primary-navy);
-            margin-bottom: 32px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .contact-detail {
-            margin-bottom: 24px;
-        }
-
-        .contact-detail strong {
-            display: block;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-
-        .contact-detail-value {
-            font-size: 16px;
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .schedule-table {
-            margin-top: 24px;
-            background: var(--bg-white);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            border: 1px solid var(--border-subtle);
-        }
-
-        .schedule-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 14px 20px;
-            border-bottom: 1px solid var(--border-subtle);
-            font-size: 14px;
-        }
-
-        .schedule-row:last-child {
-            border-bottom: none;
-        }
-
-        .schedule-day {
-            color: var(--text-secondary);
-        }
-
-        .schedule-time {
-            font-weight: 600;
-            color: var(--primary-navy);
-        }
-
-        .schedule-row.highlight {
-            background: rgba(201, 169, 110, 0.08);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
-        .social-link {
-            width: 48px;
-            height: 48px;
-            background: var(--primary-navy);
-            color: white;
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 600;
-            transition: var(--transition-smooth);
-        }
-
-        .social-link:hover {
-            background: var(--accent-gold);
-            transform: translateY(-3px);
-        }
-
-        .map-container {
-            height: 480px;
-            background: var(--bg-cream);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 16px;
-        }
-
-        .transport-info {
-            margin-top: 28px;
-            padding: 28px;
-            background: var(--bg-cream);
-            border-radius: var(--radius-md);
-        }
-
-        .transport-info h4 {
-            font-size: 16px;
-            color: var(--primary-navy);
-            margin-bottom: 16px;
-        }
-
-        .transport-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .transport-item:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ===== FAQ Section ===== */
-        .faq-section {
-            background: var(--bg-cream);
-        }
-
-        .faq-container {
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--bg-white);
-            margin-bottom: 16px;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-smooth);
-        }
-
-        .faq-item:hover {
-            box-shadow: var(--shadow-md);
-        }
-
-        .faq-question {
-            padding: 24px 32px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            transition: var(--transition-smooth);
-        }
-
-        .faq-question:hover {
-            background: var(--bg-cream);
-        }
-
-        .faq-question-text {
-            font-weight: 600;
-            font-size: 16px;
-            color: var(--primary-navy);
-        }
-
-        .faq-toggle {
-            width: 32px;
-            height: 32px;
-            background: var(--bg-cream);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: var(--accent-gold);
-            flex-shrink: 0;
-            transition: var(--transition-smooth);
-        }
-
-        .faq-item.active .faq-toggle {
-            background: var(--accent-gold);
-            color: white;
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-        }
-
-        .faq-answer-content {
-            padding: 0 32px 24px;
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-
-        .faq-actions {
-            text-align: center;
-            margin-top: 48px;
-        }
-
-        /* ===== Footer ===== */
-        .footer {
-            background: var(--primary-navy);
-            color: white;
-            padding: 80px 0 40px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.5fr;
-            gap: 56px;
-            margin-bottom: 64px;
-        }
-
-        @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .footer-brand .logo {
-            color: white;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .footer-brand p {
-            font-size: 14px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.65);
-            max-width: 320px;
-        }
-
-        .footer-column h4 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent-gold);
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-            transition: var(--transition-smooth);
-        }
-
-        .footer-links a:hover {
-            color: white;
-            padding-left: 6px;
-        }
-
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .footer-bottom {
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-copyright {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-legal {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-legal a {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-legal a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* ===== Animations ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ===== Utility Classes ===== */
-        .text-center { text-align: center; }
-        .text-gold { color: var(--accent-gold); }
-        
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-cream);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-gold);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-gold-light);
-        }
-    </style>
-
-    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MedicalClinic",
         "name": "Медклик — Травматология и ортопедия",
-        "description": "Клиника травматологии и ортопедии в Новосибирске",
+        "description": "Клиника травматологии и ортопедии в Новосибирске. Лечение причин боли без операций.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "ул. Новогодняя, 23/2",
@@ -1895,22 +55,24 @@
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="hero-badge-dot"></span>
-                        Верните себе активную жизнь без боли
+                        Верните себе активную жизнь без боли уже сегодня
                     </div>
-                    
+
                     <h1 class="hero-title display-text">
-                        Травматология<br><em>и ортопедия</em>
+                        Травматология<br><em>без боли и операций</em>
                     </h1>
-                    
+
                     <p class="hero-subtitle">
-                        Профессиональная медицинская помощь при травмах и заболеваниях опорно-двигательного аппарата. Комплексная диагностика, лечение и реабилитация.
+                        Не просто снимаем симптомы — устраняем причину боли.
+                        Срочная помощь в день обращения: переломы, вывихи, боли в спине, суставах и шее.
+                        Врачи с опытом от 7 лет, индивидуальный подход и лечение без шаблонных схем.
                     </p>
-                    
+
                     <div class="hero-actions">
-                        <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться на прием</span></button>
+                        <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться на приём</span></button>
                         <button class="btn btn-outline" onclick="scrollToSection('services')"><span>Услуги и цены</span></button>
                     </div>
-                    
+
                     <div class="hero-contact-info">
                         <div class="hero-contact-item">
                             <span class="hero-contact-label">Телефон</span>
@@ -1926,17 +88,17 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-visual">
                     <div class="hero-image-wrapper">
-                        <img 
-                            src="images/медклик 25 (33).jpg" 
+                        <img
+                            src="images/медклик 25 (33).jpg"
                             alt="Травмпункт МедКлик"
                             loading="eager"
                         >
                         <div class="hero-image-bg"></div>
                     </div>
-                        
+
                         <div class="hero-floating-card card-2">
                             <div class="floating-card-number">Рентген</div>
                             <div class="floating-card-label">Травмпункт</div>
@@ -1947,61 +109,175 @@
         </div>
     </section>
 
+    <!-- Stat Banner: 80% patients regret delaying -->
+    <section class="about-section" style="padding-top: 80px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="stat-banner animate-on-scroll">
+                <div class="stat-banner-number">80%</div>
+                <div class="stat-banner-text">
+                    пациентов, обратившихся к нам, сожалеют,<br>
+                    что не начали лечить боль раньше
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section: "Наше лечение подойдёт вам, если:" -->
+    <section class="pain-points-section" id="pain-points">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Кому мы помогаем</span>
+                <h2 class="section-title display-text">Наше лечение подойдёт вам, если:</h2>
+            </div>
+
+            <div class="pain-points-grid">
+                <div class="pain-point-card animate-on-scroll">
+                    <div class="pain-point-icon">1</div>
+                    <div class="pain-point-text">
+                        Вы устали от таблеток, мазей и бесполезных процедур, которые лишь на время приглушают боль
+                    </div>
+                </div>
+
+                <div class="pain-point-card animate-on-scroll">
+                    <div class="pain-point-icon">2</div>
+                    <div class="pain-point-text">
+                        Боль мешает вам работать, заботиться о семье и жить активно
+                    </div>
+                </div>
+
+                <div class="pain-point-card animate-on-scroll">
+                    <div class="pain-point-icon">3</div>
+                    <div class="pain-point-text">
+                        Вас мучают боли в суставах, спине, шее или постоянные головные боли
+                    </div>
+                </div>
+
+                <div class="pain-point-card animate-on-scroll">
+                    <div class="pain-point-icon">4</div>
+                    <div class="pain-point-text">
+                        Вы уже пробовали лечение, но боль возвращается снова и снова
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 56px;" class="animate-on-scroll">
+                <button class="btn btn-gold" onclick="scrollToSection('cta')"><span>Получить консультацию</span></button>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <span class="section-overline">О направлении</span>
-                <h2 class="section-title display-text">Комплексная помощь в травматологии и ортопедии</h2>
+                <h2 class="section-title display-text">С какими болями мы работаем</h2>
                 <p class="section-description">
-                    Направление травматологии и ортопедии клиники Медклик обеспечивает полный цикл медицинской помощи — от диагностики до полной реабилитации пациентов.
+                    Мы устраняем не симптомы, а источник боли, чтобы вы снова могли жить и работать с ясной головкой.
+                    Полный цикл помощи — от экстренной диагностики до полной реабилитации.
                 </p>
             </div>
-            
+
             <div class="about-grid">
                 <div class="about-card animate-on-scroll">
                     <div class="about-icon">&#x2740;</div>
                     <h3>Острые травмы</h3>
-                    <p>Экстренная помощь при переломах, вывихах, растяжениях и ушибах. Оперативная диагностика и квалифицированное лечение.</p>
+                    <p>Экстренная помощь при переломах, вывихах, растяжениях и ушибах. Срочная диагностика и лечение в день обращения — без очередей и направлений.</p>
                 </div>
-                
+
                 <div class="about-card animate-on-scroll">
                     <div class="about-icon">&#x2756;</div>
-                    <h3>Заболевания суставов</h3>
-                    <p>Диагностика и лечение артрита, артроза, бурсита. Современные методики восстановления функции суставов.</p>
+                    <h3>Боли в суставах</h3>
+                    <p>Артрит, артроз, бурсит. Невозможно выпрямиться, тянет, «стреляет»? Снимем напряжение, уберём причину и вернём телу лёгкость.</p>
                 </div>
-                
+
                 <div class="about-card animate-on-scroll">
                     <div class="about-icon">&#x2759;</div>
-                    <h3>Патологии позвоночника</h3>
-                    <p>Лечение грыж межпозвоночных дисков, остеохондроза, сколиоза. Индивидуальные программы восстановления.</p>
+                    <h3>Боли в спине и пояснице</h3>
+                    <p>Грыжи, остеохондроз, радикулит. Не можете нормально ходить, спать или встать с кровати? Поможем вернуть свободу движений — без операции.</p>
                 </div>
-                
+
                 <div class="about-card animate-on-scroll">
                     <div class="about-icon">&#x2757;</div>
-                    <h3>Спортивная медицина</h3>
-                    <p>Лечение спортивных травм и профессиональная реабилитация спортсменов любого уровня подготовки.</p>
+                    <h3>Боли в шее и мигрени</h3>
+                    <p>Каждый день начинается с таблетки? Находим и лечим причину боли, а не временно её «прикрываем».</p>
                 </div>
-                
+
                 <div class="about-card animate-on-scroll">
                     <div class="about-icon">&#x2726;</div>
-                    <h3>Ортопедические изделия</h3>
-                    <p>Индивидуальный подбор ортопедических стелек, ортезов, бандажей и корригирующих устройств.</p>
+                    <h3>Спортивные травмы</h3>
+                    <p>Лечение спортивных травм и профессиональная реабилитация спортсменов любого уровня подготовки. Возвращаем в строй быстро и безопасно.</p>
                 </div>
-                
+
                 <div class="about-card animate-on-scroll">
                     <div class="about-icon">&#x2734;</div>
-                    <h3>Инъекционная терапия</h3>
-                    <p>PRP-терапия, внутрисуставные инъекции гиалуроновой кислоты, терапевтические блокады.</p>
+                    <h3>Хроническая боль</h3>
+                    <p>Боль мучает вас месяцами или годами? Современные методы лечения причин боли — PRP-терапия, блокады, инъекции гиалуроновой кислоты.</p>
                 </div>
             </div>
-            
+
             <div class="working-hours-banner animate-on-scroll">
                 <div class="working-hours-text">
                     <h3>Режим работы клиники</h3>
-                    <p>Прием ведут врачи травматологи-ортопеды с опытом работы от 7 лет</p>
+                    <p>Приём ведут врачи травматологи-ортопеды с опытом работы от 7 лет</p>
                 </div>
                 <div class="working-hours-time">Ежедневно<br>7:30 — 21:30</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dangers Section: "Чем опасно откладывать лечение" -->
+    <section class="dangers-section" id="dangers">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Не откладывайте</span>
+                <h2 class="section-title display-text">Чем опасно откладывать лечение боли</h2>
+                <p class="section-description">
+                    Игнорирование боли повышает риск тяжёлых осложнений. Чем дольше ждёте — тем сложнее и дольше лечение.
+                </p>
+            </div>
+
+            <div class="dangers-grid">
+                <div class="danger-card animate-on-scroll">
+                    <div class="danger-number">01</div>
+                    <h3>Боль становится хронической</h3>
+                    <p>Мозг привыкает к боли — и тогда стандартные методы обезболивания перестают работать. Со временем боль уже не уходит сама.</p>
+                </div>
+
+                <div class="danger-card animate-on-scroll">
+                    <div class="danger-number">02</div>
+                    <h3>Страдает психика</h3>
+                    <p>Появляется бессонница, тревога, упадок сил. Хроническая боль истощает нервную систему и снижает качество жизни.</p>
+                </div>
+
+                <div class="danger-card animate-on-scroll">
+                    <div class="danger-number">03</div>
+                    <h3>Нарушается работа всего тела</h3>
+                    <p>Перегружаются другие суставы, мышцы и органы. Одно повреждение тянет за собой цепочку новых проблем.</p>
+                </div>
+
+                <div class="danger-card animate-on-scroll">
+                    <div class="danger-number">04</div>
+                    <h3>Теряется качество жизни</h3>
+                    <p>Ограничиваются движения, снижается энергия, исчезает радость жизни. Простой поход в магазин становится испытанием.</p>
+                </div>
+
+                <div class="danger-card animate-on-scroll">
+                    <div class="danger-number">05</div>
+                    <h3>Риск тяжёлых осложнений</h3>
+                    <p>Серьёзное заболевание может развиваться незаметно. Без диагностики его легко не обнаружить на ранней стадии.</p>
+                </div>
+
+                <div class="danger-card animate-on-scroll">
+                    <div class="danger-number">06</div>
+                    <h3>Дольше и дороже лечение</h3>
+                    <p>Чем запущеннее случай — тем дольше, сложнее и дороже возвращать здоровье. Не доводите до операции.</p>
+                </div>
+            </div>
+
+            <div class="dangers-cta animate-on-scroll">
+                <div class="dangers-cta-text">Запишитесь на диагностику сегодня — не ждите, пока боль станет привычкой</div>
+                <button class="btn btn-gold" onclick="scrollToSection('cta')"><span>Записаться на диагностику</span></button>
             </div>
         </div>
     </section>
@@ -2013,10 +289,10 @@
                 <span class="section-overline">Услуги</span>
                 <h2 class="section-title display-text">Спектр медицинских услуг</h2>
                 <p class="section-description">
-                    Полный комплекс услуг по диагностике, лечению и реабилитации заболеваний опорно-двигательного аппарата
+                    Полный комплекс услуг по диагностике, лечению и реабилитации — без очередей и направлений
                 </p>
             </div>
-            
+
             <div class="services-grid">
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
@@ -2025,12 +301,12 @@
                     </div>
                     <ul class="service-list">
                         <li>
-                            <span class="service-name">Первичный прием травматолога-ортопеда</span>
+                            <span class="service-name">Первичный приём травматолога-ортопеда</span>
                             <span class="service-price">2 600 &#x20bd;</span>
                         </li>
                         <li>
                             <span class="service-name">Повторная консультация</span>
-                            <span class="service-price">по запросу</span>
+                            <span class="service-price">2 300 &#x20bd;</span>
                         </li>
                         <li>
                             <span class="service-name">Комплексное обследование ОДА</span>
@@ -2038,7 +314,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
                         <div class="service-icon">&#x2752;</div>
@@ -2063,7 +339,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
                         <div class="service-icon">&#x275B;</div>
@@ -2084,7 +360,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
                         <div class="service-icon">&#x2772;</div>
@@ -2105,7 +381,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="service-card animate-on-scroll">
                     <div class="service-header">
                         <div class="service-icon">&#x2766;</div>
@@ -2139,65 +415,105 @@
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <span class="section-overline">Преимущества</span>
-                <h2 class="section-title display-text">Почему выбирают нас</h2>
+                <h2 class="section-title display-text">Почему пациенты выбирают нас</h2>
             </div>
-            
+
             <div class="advantages-grid">
                 <div class="advantage-item animate-on-scroll">
                     <div class="advantage-icon-wrapper">&#x23F3;</div>
-                    <h3>Оперативная помощь</h3>
-                    <p>Прием день в день без очередей. Круглосуточный травмпункт для экстренных случаев любой сложности.</p>
+                    <h3>Срочное снятие боли в день обращения</h3>
+                    <p>Не ждите неделями — приём день в день, без очередей и направлений. Круглосуточный травмпункт для экстренных случаев любой сложности.</p>
                 </div>
-                
+
                 <div class="advantage-item animate-on-scroll">
                     <div class="advantage-icon-wrapper">&#x2695;</div>
-                    <h3>Высокая квалификация</h3>
-                    <p>Врачи травматологи-ортопеды со стажем клинической практики от 7 лет. Регулярное повышение квалификации.</p>
+                    <h3>Лечение причин, а не симптомов</h3>
+                    <p>Не временно «прикрываем» проблему, а находим и устраняем её источник. Врачи травматологи-ортопеды со стажем клинической практики от 7 лет.</p>
                 </div>
-                
+
                 <div class="advantage-item animate-on-scroll">
                     <div class="advantage-icon-wrapper">&#x2699;</div>
-                    <h3>Современное оборудование</h3>
-                    <p>Цифровая рентгенография, УЗИ высокого разрешения, передовая диагностическая аппаратура.</p>
+                    <h3>Без операций и долгого восстановления</h3>
+                    <p>Современные и безопасные методы лечения: PRP-терапия, блокады, инъекции гиалуроновой кислоты. Цифровая рентгенография и УЗИ высокого разрешения.</p>
                 </div>
-                
+
                 <div class="advantage-item animate-on-scroll">
                     <div class="advantage-icon-wrapper">&#x274E;</div>
-                    <h3>Прозрачное ценообразование</h3>
-                    <p>Фиксированные цены без скрытых платежей. Возможность оплаты банковской картой и по ДМС.</p>
+                    <h3>Лечение без шаблонных схем</h3>
+                    <p>Подбираем лечение индивидуально — под ваш диагноз, образ жизни и цели. Прозрачные цены без скрытых платежей, оплата картой и по ДМС.</p>
                 </div>
-                
+
                 <div class="advantage-item animate-on-scroll">
                     <div class="advantage-icon-wrapper">&#x275A;</div>
-                    <h3>Удобная локация</h3>
-                    <p>Центр Новосибирска, развитая транспортная инфраструктура, бесплатная парковка для пациентов.</p>
+                    <h3>Доказательная медицина</h3>
+                    <p>Используем мировой опыт в лечении боли и травм. Только методы с доказанной клинической эффективностью, регулярное повышение квалификации врачей.</p>
                 </div>
-                
+
                 <div class="advantage-item animate-on-scroll">
                     <div class="advantage-icon-wrapper">&#x274C;</div>
-                    <h3>Комплексный подход</h3>
-                    <p>Диагностика, лечение и реабилитация в рамках одной клиники под наблюдением лечащего врача.</p>
+                    <h3>Комплексный подход под ключ</h3>
+                    <p>Диагностика, лечение и реабилитация в одной клинике под наблюдением лечащего врача. Центр Новосибирска, бесплатная парковка для пациентов.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DOCTORS SECTION - WITH REAL DATA -->
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-overline">Как это работает</span>
+                <h2 class="section-title display-text">Три шага к жизни без боли</h2>
+                <p class="section-description">
+                    Сделайте первый шаг прямо сейчас — остальное мы возьмём на себя
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3>Запишитесь на консультацию</h3>
+                    <p>Оставьте заявку онлайн или позвоните нам. Подберём удобное время и подскажем, какие документы взять с собой.</p>
+                    <span class="step-tag">5 минут</span>
+                </div>
+
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3>Срочное снятие боли</h3>
+                    <p>На приёме врач точно и быстро диагностирует проблему. Сразу снимаем острые болевые ощущения — облегчение вы почувствуете в день обращения.</p>
+                    <span class="step-tag">в день обращения</span>
+                </div>
+
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3>Лечение причины боли</h3>
+                    <p>Проводим полноценное лечение причины — индивидуальный план под ваш диагноз. Сопровождаем до полного восстановления и возвращаем к активной жизни.</p>
+                    <span class="step-tag">без операций</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 56px;" class="animate-on-scroll">
+                <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться на срочную консультацию</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS SECTION -->
     <section class="doctors-section" id="doctors">
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <span class="section-overline">Специалисты</span>
-                <h2 class="section-title display-text">Наши врачи</h2>
+                <h2 class="section-title display-text">Врачи, которым доверяют</h2>
                 <p class="section-description">
-                    Опытные специалисты с подтвержденной квалификацией и многолетней практикой
+                    Команда травматологов-ортопедов с подтверждённой квалификацией и многолетней практикой
                 </p>
             </div>
-            
+
             <div class="doctors-intro animate-on-scroll">
                 <p style="font-size: 17px; color: var(--text-secondary);">
-                    В нашем центре принимают квалифицированные врачи травматологи-ортопеды
+                    Каждый наш врач — специалист с высшим медицинским образованием и регулярным повышением квалификации
                 </p>
-                
+
                 <div class="doctors-features">
                     <div class="doctor-feature">
                         <span class="doctor-feature-check">&#x2713;</span>
@@ -2217,9 +533,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="doctors-grid">
-                
+
                 <!-- Doctor 1: Салимов Салим Шарифович -->
                 <div class="doctor-card animate-on-scroll">
                     <div class="doctor-photo-wrapper">
@@ -2231,18 +547,18 @@
                             Принимает
                         </div>
                     </div>
-                    
+
                     <div class="doctor-info">
                         <h3 class="doctor-name">Салимов Салим Шарифович</h3>
                         <div class="doctor-specialty">Травматолог-ортопед</div>
-                        
+
                         <p class="doctor-description">
-                            Врач травматолог-ортопед с высшим медицинским образованием. 
-                            Специализируется на диагностике и лечении заболеваний опорно-двигательного аппарата, 
-                            острых травм и их последствий. Проводит комплексное обследование и назначает 
+                            Врач травматолог-ортопед с высшим медицинским образованием.
+                            Специализируется на диагностике и лечении заболеваний опорно-двигательного аппарата,
+                            острых травм и их последствий. Проводит комплексное обследование и назначает
                             индивидуальные программы лечения.
                         </p>
-                        
+
                         <div class="doctor-meta">
                             <div class="doctor-meta-item">
                                 <span class="doctor-meta-label">Стаж работы</span>
@@ -2253,26 +569,26 @@
                                 <span class="doctor-meta-value">19 отзывов</span>
                             </div>
                         </div>
-                        
+
                         <div class="doctor-rating">
                             <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                             <span class="rating-value">4.9</span>
                             <span class="rating-count">(ПроДокторов)</span>
                         </div>
-                        
+
                         <div class="doctor-price-tag">
-                            <span class="price-label">Первичный прием</span>
+                            <span class="price-label">Первичный приём</span>
                             <span class="price-amount">2 600 &#x20bd;</span>
                         </div>
-                        
+
                         <div class="doctor-actions">
                             <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
                             <button class="btn btn-outline"><span>Подробнее</span></button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Doctor 2: Гущин Виктор -->
+
+                <!-- Doctor 2: Гущин Владимир -->
                 <div class="doctor-card animate-on-scroll">
                     <div class="doctor-photo-wrapper">
                         <div class="doctor-photo-placeholder">
@@ -2283,18 +599,18 @@
                             Принимает
                         </div>
                     </div>
-                    
+
                     <div class="doctor-info">
                         <h3 class="doctor-name">Гущин Владимир Викторович</h3>
-                        <div class="doctor-specialty">Травматолог </div>
-                        
+                        <div class="doctor-specialty">Травматолог</div>
+
                         <p class="doctor-description">
-                            Врач травматолог-ортопед. 
-                            Специализируется на диагностике и лечении заболеваний опорно-двигательного аппарата, 
-                            включая плечелопаточный периартроз, остеоартроз, пяточную шпору, сколиоз, 
+                            Врач травматолог-ортопед.
+                            Специализируется на диагностике и лечении заболеваний опорно-двигательного аппарата,
+                            включая плечелопаточный периартроз, остеоартроз, пяточную шпору, сколиоз,
                             плоскостопие. Занимается хирургическим лечением травм и их последствий.
                         </p>
-                        
+
                         <div class="doctor-meta">
                             <div class="doctor-meta-item">
                                 <span class="doctor-meta-label">Стаж работы</span>
@@ -2305,25 +621,25 @@
                                 <span class="doctor-meta-value">30 отзывов</span>
                             </div>
                         </div>
-                        
+
                         <div class="doctor-rating">
                             <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                             <span class="rating-value">4.8</span>
                             <span class="rating-count">(ПроДокторов)</span>
                         </div>
-                        
+
                         <div class="doctor-price-tag">
-                            <span class="price-label">Первичный прием</span>
+                            <span class="price-label">Первичный приём</span>
                             <span class="price-amount">2 600 &#x20bd;</span>
                         </div>
-                        
+
                         <div class="doctor-actions">
                             <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
                             <button class="btn btn-outline"><span>Подробнее</span></button>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Doctor 3: Почаев Оятуллох Хабибович -->
                 <div class="doctor-card animate-on-scroll">
                     <div class="doctor-photo-wrapper">
@@ -2335,48 +651,47 @@
                             Принимает
                         </div>
                     </div>
-                    
+
                     <div class="doctor-info">
                         <h3 class="doctor-name">Почаев Оятуллох Хабибович</h3>
                         <div class="doctor-specialty">Травматолог-ортопед</div>
-                        
+
                         <p class="doctor-description">
-                            Врач травматолог-ортопед с широким профилем практики. 
-                            Осуществляет диагностику и лечение травм опорно-двигательного аппарата, 
-                            заболеваний суставов и позвоночника. Проводит консервативное и хирургическое 
+                            Врач травматолог-ортопед с широким профилем практики.
+                            Осуществляет диагностику и лечение травм опорно-двигательного аппарата,
+                            заболеваний суставов и позвоночника. Проводит консервативное и хирургическое
                             лечение, а также реабилитацию после травм.
                         </p>
-                        
+
                         <div class="doctor-meta">
                             <div class="doctor-meta-item">
                                 <span class="doctor-meta-label">Стаж работы</span>
                                 <span class="doctor-meta-value">7+ лет</span>
                             </div>
                             <div class="doctor-meta-item">
-                                <span class="doctor-meta-label">Стоимость приема</span>
+                                <span class="doctor-meta-label">Стоимость приёма</span>
                                 <span class="doctor-meta-value">от 2 300 &#x20bd;</span>
                             </div>
                         </div>
-                        
+
                         <div class="doctor-rating">
                             <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                             <span class="rating-value">4.9</span>
                             <span class="rating-count">(Медклик)</span>
                         </div>
-                        
+
                         <div class="doctor-price-tag">
-                            <span class="price-label">Первичный прием</span>
+                            <span class="price-label">Первичный приём</span>
                             <span class="price-amount">2 600 &#x20bd;</span>
                         </div>
-                        
+
                         <div class="doctor-actions">
                             <button class="btn btn-primary" onclick="scrollToSection('cta')"><span>Записаться</span></button>
                             <button class="btn btn-outline"><span>Подробнее</span></button>
                         </div>
                     </div>
                 </div>
-                
-                
+
             </div>
         </div>
     </section>
@@ -2386,15 +701,18 @@
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <span class="section-overline">Стоимость</span>
-                <h2 class="section-title display-text">Цены на услуги</h2>
+                <h2 class="section-title display-text">Прозрачные цены на услуги</h2>
+                <p class="section-description">
+                    Фиксированные цены без скрытых платежей. Возможна оплата наличными, картой и по ДМС.
+                </p>
             </div>
-            
+
             <div class="price-table-container animate-on-scroll">
                 <div class="price-table-header">
                     <h3>Основной прайс-лист</h3>
                     <span class="price-table-header-note">* актуально на текущий период</span>
                 </div>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -2404,11 +722,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Прием травматолога-ортопеда (первичный)</td>
+                            <td>Приём травматолога-ортопеда (первичный)</td>
                             <td>2 600 &#x20bd;</td>
                         </tr>
                         <tr>
-                            <td>Прием травматолога-ортопеда (повторный)</td>
+                            <td>Приём травматолога-ортопеда (повторный)</td>
                             <td>2 300 &#x20bd;</td>
                         </tr>
                         <tr>
@@ -2441,7 +759,7 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <div class="price-footer">
                     <p class="payment-methods">
                         <strong>Принимаем к оплате:</strong> наличные средства, банковские карты, полисы ДМС
@@ -2460,14 +778,14 @@
         <div class="container">
             <div class="section-header animate-on-scroll">
                 <span class="section-overline">Отзывы</span>
-                <h2 class="section-title display-text">Мнение пациентов</h2>
+                <h2 class="section-title display-text">Пациенты, которые вернулись к активной жизни</h2>
             </div>
-            
+
             <div class="reviews-container">
                 <div class="review-card animate-on-scroll">
                     <div class="review-quote">&ldquo;</div>
                     <p class="review-text">
-                        Обратилась после спортивной травмы колена. Врач быстро поставил диагноз, назначил комплексное лечение. 
+                        Обратилась после спортивной травмы колена. Врач быстро поставил диагноз, назначил комплексное лечение.
                         Уже через неделю почувствовала значительное облегчение. Выражаю искреннюю благодарность за высокий профессионализм и внимательное отношение.
                     </p>
                     <div class="review-author">
@@ -2478,12 +796,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="review-card animate-on-scroll">
                     <div class="review-quote">&ldquo;</div>
                     <p class="review-text">
-                        Прохожу курс лечения артроза коленного сустава уже полгода. PRP-терапия дает отличные результаты — боль практически ушла, подвижность восстановлена. 
-                        Рекомендую эту клинику всем, кто ценит свое здоровье.
+                        Прохожу курс лечения артроза коленного сустава уже полгода. PRP-терапия даёт отличные результаты — боль практически ушла, подвижность восстановлена.
+                        Рекомендую эту клинику всем, кто ценит своё здоровье.
                     </p>
                     <div class="review-author">
                         <div class="review-avatar">ES</div>
@@ -2494,7 +812,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="reviews-actions animate-on-scroll">
                 <button class="btn btn-outline"><span>Оставить отзыв</span></button>
                 <button class="btn btn-primary"><span>Все отзывы на Про Докторов</span></button>
@@ -2507,9 +825,9 @@
         <div class="container">
             <div class="cta-grid">
                 <div class="cta-content animate-on-scroll">
-                    <h2 class="display-text">Запишитесь на прием к травматологу-ортопеду</h2>
-                    <p>Свяжитесь с нами удобным способом или оставьте заявку онлайн — мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
-                    
+                    <h2 class="display-text">Запишитесь на приём и сделайте первый шаг к жизни без боли</h2>
+                    <p>Свяжитесь с нами удобным способом или оставьте заявку онлайн — мы перезвоним в ближайшее время для подтверждения записи и подбора удобного времени.</p>
+
                     <div class="cta-contacts-list">
                         <div class="cta-contact-row">
                             <div class="cta-contact-icon">&#x260E;</div>
@@ -2518,7 +836,7 @@
                                 <span>+7 (383) 247-90-17</span>
                             </div>
                         </div>
-                        
+
                         <div class="cta-contact-row">
                             <div class="cta-contact-icon">&#x1F557;</div>
                             <div class="cta-contact-text">
@@ -2526,7 +844,7 @@
                                 <span>Ежедневно 7:30 — 21:30 (воскресенье с 8:00)</span>
                             </div>
                         </div>
-                        
+
                         <div class="cta-contact-row">
                             <div class="cta-contact-icon">&#x1F4CD;</div>
                             <div class="cta-contact-text">
@@ -2535,7 +853,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="cta-benefits">
                         <div class="cta-benefit">
                             <span class="cta-benefit-check">&#x2713;</span>
@@ -2543,30 +861,34 @@
                         </div>
                         <div class="cta-benefit">
                             <span class="cta-benefit-check">&#x2713;</span>
-                            Подбор удобного времени приема
+                            Подбор удобного времени приёма
                         </div>
                         <div class="cta-benefit">
                             <span class="cta-benefit-check">&#x2713;</span>
                             Напоминание о предстоящем визите
                         </div>
+                        <div class="cta-benefit">
+                            <span class="cta-benefit-check">&#x2713;</span>
+                            Срочная помощь в день обращения
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="cta-form-wrapper animate-on-scroll">
                     <h3>Онлайн-заявка</h3>
-                    <p>Заполните форму и мы свяжемся с вами</p>
-                    
+                    <p>Заполните форму, и мы перезвоним вам в течение 15 минут</p>
+
                     <form onsubmit="handleFormSubmit(event)">
                         <div class="form-group">
                             <label for="name">Ваше имя *</label>
                             <input type="text" id="name" name="name" class="form-control" required placeholder="Как к вам обращаться?">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="phone">Телефон *</label>
                             <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+7 (___) ___-__-__">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="time">Предпочтительное время</label>
                             <select id="time" name="time" class="form-control">
@@ -2576,12 +898,12 @@
                                 <option value="evening">Вечерние часы (после 17:00)</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="comment">Комментарий</label>
                             <textarea id="comment" name="comment" class="form-control" placeholder="Опишите вашу проблему (необязательно)"></textarea>
                         </div>
-                        
+
                         <button type="submit" class="cta-form-submit">Отправить заявку</button>
                     </form>
                 </div>
@@ -2596,26 +918,26 @@
                 <span class="section-overline">Контакты</span>
                 <h2 class="section-title display-text">Как нас найти</h2>
             </div>
-            
+
             <div class="contacts-grid">
                 <div class="contact-info-card animate-on-scroll">
                     <h3>&#x1F3E5; Клиника Медклик</h3>
-                    
+
                     <div class="contact-detail">
                         <strong>Юридический адрес</strong>
                         <div class="contact-detail-value">г. Новосибирск, ул. Новогодняя, 23/2</div>
                     </div>
-                    
+
                     <div class="contact-detail">
                         <strong>Телефон</strong>
                         <div class="contact-detail-value"><a href="tel:+73832479017">+7 (383) 247-90-17</a></div>
                     </div>
-                    
+
                     <div class="contact-detail">
                        <strong>Email</strong>
                         <div class="contact-detail-value"><a href="mailto:info@medclick.info">info@medclick.info</a></div>
                     </div>
-                    
+
                     <div class="schedule-table">
                         <div class="schedule-row">
                             <span class="schedule-day">Понедельник — Суббота</span>
@@ -2630,23 +952,23 @@
                             <span class="schedule-time">Без очередей</span>
                         </div>
                     </div>
-                    
+
                     <div class="social-links">
                         <a href="#" class="social-link" title="VK">VK</a>
                         <a href="#" class="social-link" title="Telegram">TG</a>
                         <a href="#" class="social-link" title="WhatsApp">WA</a>
                     </div>
                 </div>
-                
+
                 <div class="animate-on-scroll">
                     <div class="map-container">
                         <a href="https://yandex.ru/maps/?um=constructor%3A65bad059f761292ec4cc712a1e1b4952c3581db4a8c5c275ece34c7cf7688886&amp;source=constructorStatic" target="_blank">
-                            <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A65bad059f761292ec4cc712a1e1b4952c3581db4a8c5c275ece34c7cf7688886&amp;width=500&amp;height=400&amp;lang=ru_RU" 
-                                 alt="Расположение клиники Медклик на карте Яндекса" 
+                            <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A65bad059f761292ec4cc712a1e1b4952c3581db4a8c5c275ece34c7cf7688886&amp;width=500&amp;height=400&amp;lang=ru_RU"
+                                 alt="Расположение клиники Медклик на карте Яндекса"
                                  style="border: 0;">
                         </a>
                     </div>
-                    
+
                     <div class="transport-info">
                         <h4>Как добраться</h4>
                         <div class="transport-item">
@@ -2674,23 +996,23 @@
                 <span class="section-overline">FAQ</span>
                 <h2 class="section-title display-text">Часто задаваемые вопросы</h2>
             </div>
-            
+
             <div class="faq-container">
                 <div class="faq-item animate-on-scroll">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-question-text">Необходимо ли предварительная запись на прием?</span>
+                        <span class="faq-question-text">Необходима ли предварительная запись на приём?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Мы рекомендуем записываться заранее для минимизации времени ожидания. Однако принимаем пациентов и без предварительной записи при наличии свободных окон. Для экстренных случаев функционирует круглосуточный травмпункт.
+                            Мы рекомендуем записываться заранее для минимизации времени ожидания. Однако принимаем пациентов и без предварительной записи при наличии свободных окон. Для экстренных случаев функционирует частное отделение травмпункта.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item animate-on-scroll">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-question-text">Осуществляете ли вы прием по полисам ДМС?</span>
+                        <span class="faq-question-text">Осуществляете ли вы приём по полисам ДМС?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
@@ -2699,7 +1021,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item animate-on-scroll">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span class="faq-question-text">Можно ли обратиться сразу после получения травмы?</span>
@@ -2707,11 +1029,11 @@
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Безусловно. В нашей клинике работает частное отеделение травмпункта, обеспечивающее экстренную медицинскую помощь при острых травмах любой степени тяжести.
+                            Безусловно. В нашей клинике работает частное отделение травмпункта, обеспечивающее экстренную медицинскую помощь при острых травмах любой степени тяжести — в день обращения, без очередей и направлений.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item animate-on-scroll">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span class="faq-question-text">Какие документы необходимо иметь при себе?</span>
@@ -2723,7 +1045,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item animate-on-scroll">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span class="faq-question-text">Предусмотрена ли возможность рассрочки оплаты?</span>
@@ -2735,20 +1057,20 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item animate-on-scroll">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-question-text">Каково примерное время ожидания приема?</span>
+                        <span class="faq-question-text">Каково примерное время ожидания приёма?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Мы оптимизировали процессы для минимизации ожидания пациентов. Среднее время ожидания составляет 10-15 минут. При онлайн-записи можно выбрать точное время визита.
+                            Мы оптимизировали процессы для минимизации ожидания пациентов. Среднее время ожидания составляет 10–15 минут. При онлайн-записи можно выбрать точное время визита.
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-actions animate-on-scroll">
                 <button class="btn btn-gold"><span>Задать вопрос специалисту</span></button>
             </div>
@@ -2762,12 +1084,12 @@
                 <div class="footer-brand">
                     <a href="#" class="logo">МЕДКЛИК<span>.</span></a>
                     <p>
-                        Многопрофильная медицинская клиника в Новосибирске. 
-                        Травматология и ортопедия — одно из ключевых направлений 
-                        нашей деятельности.
+                        Многопрофильная медицинская клиника в Новосибирске.
+                        Травматология и ортопедия — одно из ключевых направлений
+                        нашей деятельности. Лечение причин боли, а не симптомов.
                     </p>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Услуги</h4>
                     <ul class="footer-links">
@@ -2778,7 +1100,7 @@
                         <li><a href="#services">Реабилитация</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Информация</h4>
                     <ul class="footer-links">
@@ -2789,7 +1111,7 @@
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Контакты</h4>
                     <div class="footer-contact-item">
@@ -2810,7 +1132,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     &copy; 2026 Медклик Новосибирск. Все права защищены.
@@ -2852,12 +1174,12 @@
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             const isActive = faqItem.classList.contains('active');
-            
+
             // Close all FAQs
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             // Open clicked one if it wasn't active
             if (!isActive) {
                 faqItem.classList.add('active');
@@ -2867,11 +1189,11 @@
         // Form submission
         function handleFormSubmit(event) {
             event.preventDefault();
-            
+
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData);
-            
-            alert('Благодарим за заявку!\n\nМы свяжемся с вами в ближайшее время.\n\nИмя: ' + data.name + '\nТелефон: ' + data.phone);
+
+            alert('Благодарим за заявку!\n\nМы свяжемся с вами в течение 15 минут.\n\nИмя: ' + data.name + '\nТелефон: ' + data.phone);
             event.target.reset();
         }
 
