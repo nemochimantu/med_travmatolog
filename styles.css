@@ -4,6 +4,8 @@
             --primary-deep: #1F3329;
             --accent-gold: #B8956A;
             --accent-gold-light: #C9A87E;
+            --accent-teal: #3D8B7A;
+            --accent-teal-light: #5AABA0;
             --text-primary: #1F3329;
             --text-secondary: #4a5568;
             --text-muted: #7a8a82;
@@ -302,7 +304,7 @@
         .hero-badge-dot {
             width: 8px;
             height: 8px;
-            background: var(--accent-gold);
+            background: var(--accent-teal);
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
@@ -514,7 +516,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            color: var(--accent-gold);
+            color: var(--accent-teal);
             font-weight: 600;
             margin-bottom: 16px;
             position: relative;
@@ -529,7 +531,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 2px;
-            background: var(--accent-gold);
+            background: var(--accent-teal);
         }
 
         .section-title {
@@ -593,10 +595,10 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-teal-light));
             transform: scaleX(0);
             transform-origin: left;
-            transition: var(--transition-smooth);
+            transition: transform 0.4s ease;
         }
 
         .about-card:hover {
@@ -612,14 +614,14 @@
         .about-icon {
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, rgba(184, 149, 106, 0.1), rgba(184, 149, 106, 0.05));
+            background: linear-gradient(135deg, rgba(61, 139, 122, 0.12), rgba(61, 139, 122, 0.05));
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 24px;
             font-size: 26px;
-            color: var(--accent-gold);
+            color: var(--accent-teal);
         }
 
         .about-card h3 {
@@ -714,13 +716,13 @@
         .service-icon {
             width: 48px;
             height: 48px;
-            background: var(--bg-cream);
+            background: linear-gradient(135deg, rgba(61, 139, 122, 0.1), rgba(61, 139, 122, 0.04));
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 22px;
-            color: var(--primary-navy);
+            color: var(--accent-teal);
             flex-shrink: 0;
         }
 
@@ -741,6 +743,11 @@
             padding: 14px 0;
             border-bottom: 1px solid var(--bg-cream);
             font-size: 15px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-list li:hover {
+            padding-left: 8px;
         }
 
         .service-list li:last-child {
@@ -754,14 +761,14 @@
         .service-price {
             font-family: var(--font-heading);
             font-weight: 600;
-            color: var(--primary-navy);
+            color: var(--accent-teal);
             white-space: nowrap;
             margin-left: 16px;
         }
 
         /* ===== Advantages Section ===== */
         .advantages-section {
-            background: var(--bg-white);
+            background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-cream) 100%);
         }
 
         .advantages-grid {
@@ -788,22 +795,35 @@
         }
 
         .advantage-icon-wrapper {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin: 0 auto 28px;
-            background: linear-gradient(135deg, rgba(184, 149, 106, 0.08), rgba(184, 149, 106, 0.03));
-            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(48, 71, 59, 0.06), rgba(48, 71, 59, 0.02));
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
-            color: var(--accent-gold);
+            transition: var(--transition-smooth);
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+        }
+
+        .advantage-icon-wrapper img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
             transition: var(--transition-smooth);
         }
 
         .advantage-item:hover .advantage-icon-wrapper {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, rgba(184, 149, 106, 0.15), rgba(184, 149, 106, 0.08));
+            transform: scale(1.08);
+            background: linear-gradient(135deg, rgba(184, 149, 106, 0.12), rgba(184, 149, 106, 0.04));
+            border-color: var(--accent-gold);
+            box-shadow: 0 8px 24px rgba(184, 149, 106, 0.15);
+        }
+
+        .advantage-item:hover .advantage-icon-wrapper img {
+            transform: scale(1.05);
         }
 
         .advantage-item h3 {
@@ -848,9 +868,9 @@
         }
 
         .doctor-feature-check {
-            width: 20px;
-            height: 20px;
-            background: var(--accent-gold);
+            width: 22px;
+            height: 22px;
+            background: var(--accent-teal);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1252,6 +1272,21 @@
             overflow: hidden;
         }
 
+        .cta-section-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('text-bg.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 1;
+        }
+
         .cta-section::before {
             content: '';
             position: absolute;
@@ -1269,7 +1304,7 @@
             gap: 80px;
             align-items: center;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         @media (max-width: 992px) {
@@ -1359,12 +1394,12 @@
         .cta-benefit-check {
             width: 20px;
             height: 20px;
-            background: var(--accent-gold);
+            background: var(--accent-teal);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-navy);
+            color: white;
             font-size: 11px;
             flex-shrink: 0;
         }
@@ -1434,7 +1469,7 @@
         .cta-form-submit {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-teal-light));
             color: white;
             border: none;
             border-radius: var(--radius-md);
@@ -1449,7 +1484,7 @@
 
         .cta-form-submit:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 8px 25px rgba(61, 139, 122, 0.35);
         }
 
         /* ===== Contacts Section ===== */
@@ -1840,7 +1875,7 @@
 
         /* ===== Pain Points Section ===== */
         .pain-points-section {
-            background: var(--bg-cream);
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-white) 100%);
         }
         .pain-points-intro {
             text-align: center;
@@ -1876,19 +1911,19 @@
         .pain-point-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-md);
-            border-color: var(--accent-gold);
+            border-color: var(--accent-teal);
         }
         .pain-point-icon {
             flex-shrink: 0;
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(184, 149, 106, 0.15), rgba(184, 149, 106, 0.05));
+            background: linear-gradient(135deg, rgba(61, 139, 122, 0.15), rgba(61, 139, 122, 0.05));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 22px;
-            color: var(--accent-gold);
+            color: var(--accent-teal);
             font-weight: 700;
         }
         .pain-point-text {
@@ -1960,16 +1995,32 @@
 
         /* ===== How It Works Section ===== */
         .how-it-works-section {
-            background: var(--bg-white);
+            background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-cream) 100%);
         }
         .steps-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 24px;
             position: relative;
+            align-items: center;
         }
         @media (max-width: 768px) {
-            .steps-grid { grid-template-columns: 1fr; }
+            .steps-grid { 
+                grid-template-columns: 1fr; 
+                gap: 20px;
+            }
+            .step-connector { display: none; }
+        }
+        .step-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .step-connector img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            opacity: 0.5;
         }
         .step-card {
             text-align: center;
@@ -1990,13 +2041,13 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-teal-light));
             color: white;
             font-family: var(--font-display);
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 24px;
-            box-shadow: 0 8px 20px rgba(184, 149, 106, 0.3);
+            box-shadow: 0 8px 20px rgba(61, 139, 122, 0.3);
         }
         .step-card h3 {
             font-size: 20px;
@@ -2017,11 +2068,12 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--accent-gold);
+            color: var(--accent-teal);
         }
 
         /* ===== Stat Banner ===== */
         .stat-banner {
+            position: relative;
             background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
             color: white;
             padding: 56px 40px;
@@ -2029,17 +2081,37 @@
             text-align: center;
             margin: 0 auto;
             max-width: 960px;
+            overflow: hidden;
+        }
+        .stat-banner-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background-image: url('cross-bg.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        .stat-banner-content {
+            position: relative;
+            z-index: 2;
         }
         .stat-banner-number {
             font-family: var(--font-display);
             font-size: 88px;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1;
             margin-bottom: 16px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         @media (max-width: 768px) {
             .stat-banner-number { font-size: 64px; }
             .stat-banner { padding: 40px 24px; }
+            .stat-banner-bg { width: 35%; opacity: 0.15; }
         }
         .stat-banner-text {
             font-family: var(--font-display);
