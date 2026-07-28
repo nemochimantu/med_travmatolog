@@ -232,7 +232,7 @@
         }
 
         .btn-gold {
-            font-size: 1.25vw;
+            --font-size: 1.25vw;
             font-weight: 400;
             color: white;
             padding: 0.83vw 1.5vw;
