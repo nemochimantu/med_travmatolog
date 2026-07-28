@@ -231,8 +231,17 @@
         }
 
         .btn-gold {
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            font-size: 1.25vw;
+            font-weight: 400;
             color: white;
+            padding: 0.83vw 1.5vw;
+            background: #1BA4AB;
+            transition: .4s;
+            outline: 1px solid #FFFFFF00;
+            border-radius: 2.08vw;
+            cursor: pointer;
+            text-align: center;
+            align-content: center;
         }
 
         .btn-gold:hover {
