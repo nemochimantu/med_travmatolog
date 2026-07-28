@@ -223,6 +223,7 @@
             background: transparent;
             color: var(--primary-navy);
             border: 2px solid var(--primary-navy);
+            border-radius: 2.08vw;
         }
 
         .btn-outline:hover {
